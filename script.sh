@@ -1,5 +1,7 @@
 #!/bin/bash
 
+exec > /var/log/user-data.log 2>&1
+
 #Update the Ubuntu machine
 
 sudo apt update -y
@@ -11,7 +13,7 @@ sudo apt install nodejs -y
 sudo apt install npm -y
 
 #Clone the repository
-git clone https://github.com/netha910/AWS-Demo-Project.git /home/ubuntu/project
+git clone https://github.com/netha910/AWS-Demo-Project.git  /home/ubuntu/project
 
 #cd in the folder
 cd /home/ubuntu/project
